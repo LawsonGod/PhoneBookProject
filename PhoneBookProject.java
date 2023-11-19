@@ -12,9 +12,10 @@ public class PhoneBookProject {
         String userFirstName = getUserInput("Entrez un Prénom");
         String userPhoneNumber = getUserInput("Entrez un numéro de téléphone");
 
-        System.out.println(userLastName);
-        System.out.println(userFirstName);
-        System.out.println(userPhoneNumber);
+        Contact newContact = new Contact(userLastName, userFirstName, userPhoneNumber);
+
+
+        System.out.println(newContact.toString());   /* Sans le toString le systeme print out renvoi un sort de code ASCII qui fait reference à sa place dans la mémoire*/
 
         sc.close();
     }
